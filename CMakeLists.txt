@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.13)
+project( cv )
+set(CMAKE_CXX_STANDARD 11)
+set(OpenCV_DIR /usr/local/Cellar/opencv/4.0.1/bin )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( cv src/mask_operation.cpp)
+target_link_libraries( cv ${OpenCV_LIBS} )
